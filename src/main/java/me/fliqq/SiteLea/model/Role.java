@@ -16,15 +16,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 public class Role {
-    private enum RoleName {
-        ROLE_USER,
-        ROLE_ADMIN
-    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
 
     @NotBlank
-    private RoleName name;
+    private String name;
 }
